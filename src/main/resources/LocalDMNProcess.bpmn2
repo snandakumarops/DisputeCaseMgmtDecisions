@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_4ybRsEQIEemIAof8P_TtIQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+  <bpmn2:itemDefinition id="_automaticItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_cardholderRiskRatingItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_fraudRiskRatingItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_ageItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_incidentCountItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_cardholderStatusItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_fraudAmountItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_issueTypeItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_customerUseItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_cardTypeItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_agentPriorityItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_namespaceInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_modelInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_AgeInputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Incident-CountInputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-StatusInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Fraud-AmountInputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Card-TypeInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Customer-UseInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Issue-TypeInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Process-AutomaticallyOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-Risk-RatingOutputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Dispute-Risk-RatingOutputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__FD653A3B-E612-44BF-9051-C0C25DABF730_Agent-PriorityOutputXItem" structureRef="Integer"/>
+  <bpmn2:process id="CreditCardDisputeDecisions.LocalDMNProcess" drools:packageName="org.jbpm" drools:version="1.0" name="LocalDMNProcess" isExecutable="true">
+    <bpmn2:property id="automatic" itemSubjectRef="_automaticItem"/>
+    <bpmn2:property id="cardholderRiskRating" itemSubjectRef="_cardholderRiskRatingItem"/>
+    <bpmn2:property id="fraudRiskRating" itemSubjectRef="_fraudRiskRatingItem"/>
+    <bpmn2:property id="age" itemSubjectRef="_ageItem"/>
+    <bpmn2:property id="incidentCount" itemSubjectRef="_incidentCountItem"/>
+    <bpmn2:property id="cardholderStatus" itemSubjectRef="_cardholderStatusItem"/>
+    <bpmn2:property id="fraudAmount" itemSubjectRef="_fraudAmountItem"/>
+    <bpmn2:property id="issueType" itemSubjectRef="_issueTypeItem"/>
+    <bpmn2:property id="customerUse" itemSubjectRef="_customerUseItem"/>
+    <bpmn2:property id="cardType" itemSubjectRef="_cardTypeItem"/>
+    <bpmn2:property id="agentPriority" itemSubjectRef="_agentPriorityItem"/>
+    <bpmn2:startEvent id="processStartEvent" drools:selectable="true" color:background-color="#9acd32" color:border-color="#000000" color:color="#000000" name="">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>_E0A1D13A-B1F3-4C08-A7A6-B7C2900ED2BE</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_AE1CC702-B18D-44B4-9134-4D78AA970055" drools:selectable="true" color:background-color="#ff6347" color:border-color="#000000" color:color="#000000" name="">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_984A2EA9-C597-4160-8ADA-83611AA86198</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:businessRuleTask id="_FD653A3B-E612-44BF-9051-C0C25DABF730" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Evaluate DMN Model" implementation="http://www.jboss.org/drools/dmn">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Evaluate DMN Model]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_E0A1D13A-B1F3-4C08-A7A6-B7C2900ED2BE</bpmn2:incoming>
+      <bpmn2:outgoing>_984A2EA9-C597-4160-8ADA-83611AA86198</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_4yb4wEQIEemIAof8P_TtIQ">
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_namespaceInputX" drools:dtype="String" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_namespaceInputXItem" name="namespace"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_modelInputX" drools:dtype="String" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_modelInputXItem" name="model"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_AgeInputX" drools:dtype="Integer" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_AgeInputXItem" name="Age"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Incident-CountInputX" drools:dtype="Integer" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Incident-CountInputXItem" name="Incident Count"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-StatusInputX" drools:dtype="String" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-StatusInputXItem" name="Cardholder Status"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Fraud-AmountInputX" drools:dtype="Integer" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Fraud-AmountInputXItem" name="Fraud Amount"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Card-TypeInputX" drools:dtype="String" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Card-TypeInputXItem" name="Card Type"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Customer-UseInputX" drools:dtype="String" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Customer-UseInputXItem" name="Customer Use"/>
+        <bpmn2:dataInput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Issue-TypeInputX" drools:dtype="String" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Issue-TypeInputXItem" name="Issue Type"/>
+        <bpmn2:dataOutput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Process-AutomaticallyOutputX" drools:dtype="Boolean" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Process-AutomaticallyOutputXItem" name="Process Automatically"/>
+        <bpmn2:dataOutput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-Risk-RatingOutputX" drools:dtype="Integer" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-Risk-RatingOutputXItem" name="Cardholder Risk Rating"/>
+        <bpmn2:dataOutput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Dispute-Risk-RatingOutputX" drools:dtype="Integer" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Dispute-Risk-RatingOutputXItem" name="Dispute Risk Rating"/>
+        <bpmn2:dataOutput id="_FD653A3B-E612-44BF-9051-C0C25DABF730_Agent-PriorityOutputX" drools:dtype="Integer" itemSubjectRef="__FD653A3B-E612-44BF-9051-C0C25DABF730_Agent-PriorityOutputXItem" name="Agent Priority"/>
+        <bpmn2:inputSet id="_4yb4wUQIEemIAof8P_TtIQ">
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_namespaceInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_modelInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_AgeInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Incident-CountInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-StatusInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Fraud-AmountInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Card-TypeInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Customer-UseInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Issue-TypeInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_4yb4wkQIEemIAof8P_TtIQ">
+          <bpmn2:dataOutputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Process-AutomaticallyOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-Risk-RatingOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Dispute-Risk-RatingOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_FD653A3B-E612-44BF-9051-C0C25DABF730_Agent-PriorityOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_4yb4w0QIEemIAof8P_TtIQ">
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_namespaceInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_4yb4xEQIEemIAof8P_TtIQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_4yb4xUQIEemIAof8P_TtIQ"><![CDATA[http://www.entando.com/dmn/definitions/_c540edb3-4b27-4577-8863-1cf0267762b3]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_4yb4xkQIEemIAof8P_TtIQ">_FD653A3B-E612-44BF-9051-C0C25DABF730_namespaceInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb4x0QIEemIAof8P_TtIQ">
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_modelInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_4yb4yEQIEemIAof8P_TtIQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_4yb4yUQIEemIAof8P_TtIQ"><![CDATA[credit-dispute-simple-input]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_4yb4ykQIEemIAof8P_TtIQ">_FD653A3B-E612-44BF-9051-C0C25DABF730_modelInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb4y0QIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>age</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_AgeInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb4zEQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>incidentCount</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Incident-CountInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb4zUQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>cardholderStatus</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-StatusInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb4zkQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>fraudAmount</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Fraud-AmountInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb4z0QIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>cardType</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Card-TypeInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb40EQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>customerUse</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Customer-UseInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_4yb40UQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>issueType</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Issue-TypeInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_4yb40kQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Process-AutomaticallyOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>automatic</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_4yb400QIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Cardholder-Risk-RatingOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>cardholderRiskRating</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_4yb41EQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Dispute-Risk-RatingOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>fraudRiskRating</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_4yb41UQIEemIAof8P_TtIQ">
+        <bpmn2:sourceRef>_FD653A3B-E612-44BF-9051-C0C25DABF730_Agent-PriorityOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>agentPriority</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:businessRuleTask>
+    <bpmn2:sequenceFlow id="_E0A1D13A-B1F3-4C08-A7A6-B7C2900ED2BE" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="processStartEvent" targetRef="_FD653A3B-E612-44BF-9051-C0C25DABF730"/>
+    <bpmn2:sequenceFlow id="_984A2EA9-C597-4160-8ADA-83611AA86198" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_FD653A3B-E612-44BF-9051-C0C25DABF730" targetRef="_AE1CC702-B18D-44B4-9134-4D78AA970055"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_4yb41kQIEemIAof8P_TtIQ">
+    <bpmndi:BPMNPlane id="_4yb410QIEemIAof8P_TtIQ" bpmnElement="CreditCardDisputeDecisions.LocalDMNProcess">
+      <bpmndi:BPMNShape id="_4yb42EQIEemIAof8P_TtIQ" bpmnElement="processStartEvent">
+        <dc:Bounds height="30.0" width="30.0" x="75.0" y="165.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_4yb42UQIEemIAof8P_TtIQ" bpmnElement="_AE1CC702-B18D-44B4-9134-4D78AA970055">
+        <dc:Bounds height="28.0" width="28.0" x="390.0" y="166.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_4yb42kQIEemIAof8P_TtIQ" bpmnElement="_FD653A3B-E612-44BF-9051-C0C25DABF730">
+        <dc:Bounds height="80.0" width="100.0" x="210.0" y="140.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_4yb420QIEemIAof8P_TtIQ" bpmnElement="_E0A1D13A-B1F3-4C08-A7A6-B7C2900ED2BE" sourceElement="_4yb42EQIEemIAof8P_TtIQ" targetElement="_4yb42kQIEemIAof8P_TtIQ">
+        <di:waypoint xsi:type="dc:Point" x="90.0" y="180.0"/>
+        <di:waypoint xsi:type="dc:Point" x="260.0" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_4yb43EQIEemIAof8P_TtIQ" bpmnElement="_984A2EA9-C597-4160-8ADA-83611AA86198" sourceElement="_4yb42kQIEemIAof8P_TtIQ" targetElement="_4yb42UQIEemIAof8P_TtIQ">
+        <di:waypoint xsi:type="dc:Point" x="260.0" y="180.0"/>
+        <di:waypoint xsi:type="dc:Point" x="404.0" y="180.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_4yb43UQIEemIAof8P_TtIQ" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_E0A1D13A-B1F3-4C08-A7A6-B7C2900ED2BE" id="_4yb43kQIEemIAof8P_TtIQ">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_AE1CC702-B18D-44B4-9134-4D78AA970055" id="_4yb430QIEemIAof8P_TtIQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_FD653A3B-E612-44BF-9051-C0C25DABF730" id="_4yb44EQIEemIAof8P_TtIQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_984A2EA9-C597-4160-8ADA-83611AA86198" id="_4yb44UQIEemIAof8P_TtIQ">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_4yb44kQIEemIAof8P_TtIQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_4ybRsEQIEemIAof8P_TtIQ</bpmn2:source>
+    <bpmn2:target>_4ybRsEQIEemIAof8P_TtIQ</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>

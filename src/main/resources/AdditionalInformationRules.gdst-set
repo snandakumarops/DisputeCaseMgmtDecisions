@@ -1,0 +1,19 @@
+<graph>
+  <entries>
+    <entry>
+      <pathHead class="org.uberfire.backend.vfs.PathFactory$PathImpl">
+        <uri>default://master@fsi-credit-dispute-myrepo/CreditCardDisputeDecisions/src/main/resources/MinimumAgeRules.gdst</uri>
+        <fileName>MinimumAgeRules.gdst</fileName>
+        <attributes/>
+        <hasVersionSupport>true</hasVersionSupport>
+      </pathHead>
+      <pathVersion class="org.uberfire.backend.vfs.PathFactory$PathImpl">
+        <uri>default://8b9efe97d668157443a7ec956e44332effb1eaaa@fsi-credit-dispute-myrepo/CreditCardDisputeDecisions/src/main/resources/MinimumAgeRules.gdst</uri>
+        <fileName>MinimumAgeRules.gdst</fileName>
+        <hasVersionSupport>false</hasVersionSupport>
+      </pathVersion>
+      <x>-400.0</x>
+      <y>-1000.0</y>
+    </entry>
+  </entries>
+</graph>
